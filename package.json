@@ -1,0 +1,38 @@
+{
+  "name": "rum-client-js",
+  "version": "1.1.9",
+  "author": "Pushkar Goel",
+  "license": "ISC",
+  "description": "A light weighted client side library to enable RUM(Real User Monitoring) for web applications",
+  "main": "./dist/rum-client.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "rm -rd dist && npm run tslint && npm run dev-build && npm run prod-build",
+    "dev-build": "webpack --mode development",
+    "prod-build": "NODE_ENV=production webpack --mode production",
+    "tslint": "tslint -p \"tsconfig.json\"",
+    "tslint-fix": "npm run tslint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pushkar0108/rum-client-js.git"
+  },
+  "keywords": [
+    "monitoring",
+    "rum",
+    "real user monitoring",
+    "performance",
+    "web metrics"
+  ]
+}
